@@ -1,3 +1,12 @@
+.sectionContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.widthThird {
+  max-width: 40%;
+}
+
 .heading2Xl {
     font-size: 3.5em;
     font-weight: 500;

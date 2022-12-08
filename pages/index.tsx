@@ -21,21 +21,6 @@ export default function Home({
         <title>{siteTitle}</title>
       </Head>
       <div className={utilStyles.mainContainer}>
-        <section className={utilStyles.headingMd}>
-          <h1 className={utilStyles.heading2Xl}>Hello.</h1>
-          <h2 className={utilStyles.headingXl}>My name is Paul Doazan.</h2>
-          <p>
-            I am an independent software developer currently based in Bordeaux.
-          </p>
-          <p>
-            You can follow me on Twitter, Github.
-          </p>
-          <p>
-            Outside of programming, spending time with my wife and taking care of our two kids, I love Comics,
-            I practice climbing, and I enjoy playing Pelote Basque with friends. 
-          </p>
-        </section>
-        
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
           <h2 className={utilStyles.headingLg}>Blog</h2>
           <ul className={utilStyles.list}>

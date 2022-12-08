@@ -4,18 +4,22 @@ import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
 
-const postsDirectory = path.join(process.cwd(), 'posts')
+const postsDirectory = path.join(process.cwd(), '/posts')
 
 export function getSortedPostsData() {
   // Get file names under /posts
-  const fileNames = fs.readdirSync(postsDirectory)
-  const allPostsData = fileNames.map(fileName => {
+  const fileNames: string[] = fs.readdirSync(postsDirectory)
+  const allPostsData: {
+        date: string;
+        title: string;
+        id: string;
+    }[] = fileNames.map(fileName => {
     // Remove ".md" from file name to get id
-    const id = fileName.replace(/\.md$/, '')
+    const id: string = fileName.replace(/\.md$/, '')
 
     // Read markdown file as string
-    const fullPath = path.join(postsDirectory, fileName)
-    const fileContents = fs.readFileSync(fullPath, 'utf8')
+    const fullPath: string = path.join(postsDirectory, fileName)
+    const fileContents: string = fs.readFileSync(fullPath, 'utf8')
 
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents)
@@ -36,7 +40,7 @@ export function getSortedPostsData() {
 }
 
 export function getAllPostIds() {
-  const fileNames = fs.readdirSync(postsDirectory)
+  const fileNames: string[] = fs.readdirSync(postsDirectory)
   return fileNames.map(fileName => {
     return {
       params: {
