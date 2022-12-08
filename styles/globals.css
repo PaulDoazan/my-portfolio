@@ -1,9 +1,10 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Rubik, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; 
+  font-size: calc(10px + 0.33vw);
+  -webkit-font-smoothing: antialiased;
+  padding: 2vh 5vw;
 }
 
 a {
@@ -13,6 +14,12 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+p {
+  font-size: 1.4em;
+  font-weight: 300;
+  line-height: 1.2;
 }
 
 @media (prefers-color-scheme: dark) {
