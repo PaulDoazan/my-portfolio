@@ -4,5 +4,5 @@ export default function Date({ dateString }: { dateString: string }) {
   console.log(dateString);
   
   const date = parseISO(dateString)
-  return <time dateTime={dateString}>{format(date, 'LLLL d, yyyy')}</time>
+  return <time dateTime={dateString}>{format(date, 'LLLL, yyyy')}</time>
 }
