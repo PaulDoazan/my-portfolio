@@ -20,7 +20,7 @@ export default function Home({
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <div className={utilStyles.mainContainer}>
+      {/* <div className={utilStyles.mainContainer}>
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
           <h2 className={utilStyles.headingLg}>Blog</h2>
           <ul className={utilStyles.list}>
@@ -35,7 +35,7 @@ export default function Home({
             ))}
           </ul>
         </section>
-      </div>
+      </div> */}
     </Layout>
   )
 }

@@ -1,10 +1,25 @@
 .sectionContainer {
-  display: flex;
-  justify-content: space-around;
+  width: 100%;
+  /* display: flex;
+  justify-content: space-around;  */
 }
 
-.widthThird {
-  max-width: 40%;
+.firstSection {
+  position: absolute;
+}
+
+.secondSection {
+  width: 100%;
+  position: absolute;
+  margin-left: 48%;
+}
+
+.width40 {
+  max-width: 35%;
+}
+
+.width30 {
+  max-width: 30%;
 }
 
 .heading2Xl {
