@@ -1,6 +1,6 @@
 ---
 title: 'ALEC - Apprendre à Lire et à Compter'
-dates: ['2020-01-02', '2022-08-31']
+dates: ['2020-09-01', '2022-08-31']
 ---
 
 **A**pprendre à **L**ire **E**t à **C**ompter

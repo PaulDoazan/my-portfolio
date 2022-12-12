@@ -22,8 +22,9 @@ export default function Post({
       <article>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
           <div className={utilStyles.lightText}>
-          {postData.dates.map((d, ind) => {
-            return <Date key={ind} dateString={d} />
+          {postData.dates.map((d, ind, arr) => {           
+            const differentYears = d.substring(0, 4) !== arr[arr.length - 1].substring(0, 4);
+            return <Date key={ind} dateString={d} fullDate={ind === arr.length - 1 || differentYears} withHyphen={ind < arr.length - 1} />
           })}
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
