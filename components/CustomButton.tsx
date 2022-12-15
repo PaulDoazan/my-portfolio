@@ -1,24 +1,26 @@
-import { readFileSync } from 'fs';
 import Link from 'next/link'
-import React, { MutableRefObject, useEffect, useState } from 'react'
 import utilStyles from '../styles/utils.module.css'
+import { selectPostState, setPostState } from "../store/postSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 
 interface ButtonProps {
     btnContent: string;
-    clickHandler: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
   }
 
-export default function CustomButton({btnContent, clickHandler} : ButtonProps) {
-    const [selected, setSelected] = useState(false);
+export default function CustomButton({btnContent} : ButtonProps) {
+    const postState = useSelector(selectPostState);
+    const dispatch = useDispatch();
+    const router = useRouter()
     const handleClick = (e :  React.MouseEvent<HTMLElement>) => {
-        clickHandler(e);
-        setSelected(!selected);
+          dispatch(setPostState(btnContent));
     }
 
   return (
     <>
         <Link  data-id="customBtn" onClick={handleClick} href={`/posts/${btnContent.toLowerCase()}`}>
-            <span className={selected ? utilStyles.fullYellowLink : utilStyles.thinYellowLink}>{btnContent}</span>
+            <span className={postState === btnContent ? utilStyles.fullYellowLink : utilStyles.thinYellowLink}>{btnContent}</span>
         </Link>
         
     </>

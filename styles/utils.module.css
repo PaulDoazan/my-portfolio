@@ -30,7 +30,7 @@
   left: -0.1em;
   right: -0.1em;
   bottom: 0;
-  transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+  transition: top 400ms cubic-bezier(0, 0.5, 0.13, 1);
   background-color: rgba(227, 204, 0, 0.5);
 }
 
@@ -46,8 +46,12 @@
   left: -0.1em;
   right: -0.1em;
   bottom: 0;
-  transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+  transition: top 400ms cubic-bezier(0, 0.5, 0.13, 1);
   background-color: rgba(227, 204, 0, 0.5);
+}
+
+.thinYellowLink::not(:hover):after {
+  top: 81%;
 }
 
 .crossBtnContainer {
