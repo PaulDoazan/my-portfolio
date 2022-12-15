@@ -117,3 +117,12 @@
 .lightText {
   color: #666;
 }
+
+.displayNone {
+  display: none;
+}
+
+.arrowsContainer {
+  display: flex;
+  justify-content: space-between;
+}

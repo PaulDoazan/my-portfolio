@@ -50,7 +50,7 @@ export default function Layout({
           {!home && ( 
             <Nav /> 
           )}
-          {children}  
+          {children}
         </section>
       </div>
     </div>

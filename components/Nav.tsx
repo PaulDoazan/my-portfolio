@@ -5,6 +5,7 @@ import utilStyles from '../styles/utils.module.css'
 import { useEffect, useRef, useState } from 'react'
 import { selectPostState, setPostState } from "../store/postSlice";
 import { useDispatch, useSelector } from "react-redux";
+import Arrows from './Arrows'
 
 interface ButtonProps {
     onHomePage?: boolean;
@@ -29,8 +30,7 @@ export default function Nav({onHomePage} : ButtonProps) {
             </div>             
             </Link>
         </div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/></svg>
+            <Arrows />
         </div> 
     )
 }
