@@ -11,6 +11,7 @@ interface ButtonProps {
   }
 
 export default function Nav({onHomePage} : ButtonProps) {
+    const postState = useSelector(selectPostState);
     const dispatch = useDispatch();
     const handleClick = () => {
         dispatch(setPostState(null));
@@ -19,6 +20,7 @@ export default function Nav({onHomePage} : ButtonProps) {
     return (
         <div className={styles.backToHome}>
             <div className={utilStyles.crossBtnContainer}>
+            <h1 className={utilStyles.headingXl}>{postState}</h1>
             <Link href="/" onClick={handleClick}>
             <div className={utilStyles.crossBtn}>
                 <svg clipRule="evenodd" fillRule="evenodd" strokeLinejoin="round" strokeMiterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -27,6 +29,8 @@ export default function Nav({onHomePage} : ButtonProps) {
             </div>             
             </Link>
         </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/></svg>
         </div> 
     )
 }
