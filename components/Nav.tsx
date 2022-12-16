@@ -7,6 +7,7 @@ import { selectPostState, setPostState } from "../store/postSlice";
 import { useDispatch, useSelector } from "react-redux";
 import Arrows from './Arrows'
 import Animation from './Animation'
+import Script from 'next/script'
 
 interface ButtonProps {
     onHomePage?: boolean;

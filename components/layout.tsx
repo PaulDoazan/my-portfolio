@@ -9,6 +9,7 @@ import { useEffect, useRef, useState } from 'react'
 import { selectPostState, setPostState } from "../store/postSlice";
 import { useDispatch, useSelector } from "react-redux";
 import Nav from './Nav'
+import Script from 'next/script'
 
 const name: string = 'Paul Doazan'
 export const siteTitle: string = 'Paul Doazan'
@@ -21,11 +22,21 @@ export default function Layout({
   home?: boolean
 }) {
   const dispatch = useDispatch();
+
   const handleClick = () => {
     dispatch(setPostState(null));
   }
+  
+  const onScriptLoaded = () => {
+    console.log('loaded');
+}
+
   return (
     <div className={styles.container}>
+      <Script
+                src="https://code.createjs.com/1.0.0/createjs.min.js"
+                onLoad={onScriptLoaded}
+            />
       <div className={`${utilStyles.sectionContainer}`}>
         <section className={`${utilStyles.headingMd} ${utilStyles.width40} ${utilStyles.firstSection}`}>
             <h1 className={utilStyles.heading2Xl}>Hello.</h1>
