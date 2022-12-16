@@ -26,7 +26,7 @@ export default function Layout({
   const handleClick = () => {
     dispatch(setPostState(null));
   }
-  
+
   const onScriptLoaded = () => {
     console.log('loaded');
 }
@@ -54,12 +54,12 @@ export default function Layout({
             </p>
             <p>
               Outside of programming, spending time with my wife and taking care of our two kids,
-              I practice <Link className={utilStyles.yellowLink} href="/">climbing</Link> and I enjoy playing <Link className={utilStyles.yellowLink} href="/">Pelote Basque</Link> with friends. 
+              I practice <CustomButton btnContent={'climbing'} /> and I enjoy playing <CustomButton btnContent={'Pelote Basque'} /> with friends. 
             </p>
         </section>
         <section className={`${utilStyles.width30} ${utilStyles.secondSection}`}>
           {!home && ( 
-            <Nav /> 
+              <Nav />
           )}
           {children}
         </section>

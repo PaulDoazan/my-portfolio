@@ -20,7 +20,7 @@ export default function Nav({onHomePage} : ButtonProps) {
         dispatch(setPostState(null));
     }
 
-    return (
+    return (   
         <div className={styles.backToHome}>
             <div className={utilStyles.crossBtnContainer}>
             {/* <h1 className={utilStyles.headingXl}>{postState}</h1> */}
