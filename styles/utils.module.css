@@ -57,7 +57,7 @@
 .crossBtnContainer {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
   align-items: center;
 }
 
@@ -125,4 +125,23 @@
 .arrowsContainer {
   display: flex;
   justify-content: space-between;
+}
+
+.animationContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.canvasContainer {
+  width: 66%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.canvas {
+  width: -webkit-fill-available;
+  background-color: white;
 }

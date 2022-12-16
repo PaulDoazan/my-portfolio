@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from 'react'
 import { selectPostState, setPostState } from "../store/postSlice";
 import { useDispatch, useSelector } from "react-redux";
 import Arrows from './Arrows'
+import Animation from './Animation'
 
 interface ButtonProps {
     onHomePage?: boolean;
@@ -21,7 +22,7 @@ export default function Nav({onHomePage} : ButtonProps) {
     return (
         <div className={styles.backToHome}>
             <div className={utilStyles.crossBtnContainer}>
-            <h1 className={utilStyles.headingXl}>{postState}</h1>
+            {/* <h1 className={utilStyles.headingXl}>{postState}</h1> */}
             <Link href="/" onClick={handleClick}>
             <div className={utilStyles.crossBtn}>
                 <svg clipRule="evenodd" fillRule="evenodd" strokeLinejoin="round" strokeMiterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -30,6 +31,11 @@ export default function Nav({onHomePage} : ButtonProps) {
             </div>             
             </Link>
         </div>
+            <div className={utilStyles.animationContainer}>
+                <div className={utilStyles.canvasContainer}>
+                    <Animation />
+                </div>
+            </div>
             <Arrows />
         </div> 
     )
