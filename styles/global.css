@@ -8,6 +8,12 @@ body {
   background-color: #fcfcfc;
 }
 
+@media (max-width: 850px) {
+  body {
+    padding: 0.5vh 3.5vw;
+  }
+}
+
 a {
   color: black;
   text-decoration: none;
