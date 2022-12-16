@@ -57,7 +57,7 @@ export default function Layout({
               I practice <CustomButton btnContent={'climbing'} /> and I enjoy playing <CustomButton btnContent={'Pelote Basque'} /> with friends. 
             </p>
         </section>
-        <section className={`${utilStyles.width30} ${utilStyles.secondSection}`}>
+        <section className={`${utilStyles.width30} ${utilStyles.secondSection} ${home && utilStyles.displayNone}`}>
           {!home && ( 
               <Nav />
           )}
