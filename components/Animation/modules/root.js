@@ -33,7 +33,6 @@ export default function root(stage) {
     })
 
     function changeCharacter(e, stage, container) {
-        console.log(stage.polygons.length) 
         indexCharacter++;
         if (indexCharacter >= characters.length) indexCharacter = 0;
     

@@ -8,7 +8,6 @@ export default function Animation() {
     const canvasRef = useRef(null);
 
     const onScriptLoaded = () => {
-        if(window.createjs === undefined) return;
         const createjs = window.createjs;
         const stage = new createjs.Stage(canvasRef.current);
         createjs.Touch.enable(stage);
