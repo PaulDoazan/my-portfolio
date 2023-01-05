@@ -45,9 +45,9 @@ export default function Layout({
               I am an independent web developer currently based in Bordeaux.
             </p>
             <p>
-              You can see the missions I realized on my <CustomButton btnContent={'Github'} /> and my <CustomButton btnContent={'Linkedin'}/>.
+              You can see the missions I&apos;ve accomplished on my <CustomButton btnContent={'Github'} /> and my <CustomButton btnContent={'Linkedin'}/>.
               </p><p>
-              I present here my most recent works (<CustomButton btnContent={'Bixie'} />, <CustomButton btnContent={'Alec'} />, <CustomButton btnContent={'My portfolio'} />), 
+              Here are my most recent works (<CustomButton btnContent={'Bixie'} />, <CustomButton btnContent={'Alec'} />, <CustomButton btnContent={'My portfolio'} />), 
               the ones I spent such a great time with the team (<CustomButton btnContent={'eduMedia'} />, <CustomButton btnContent={'Sonesdi'} />)
                and some others that I particularly like 
               (<CustomButton btnContent={'MoultPistes'} />, <CustomButton btnContent={'s+a wedding'} />).

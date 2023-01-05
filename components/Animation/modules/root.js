@@ -2,9 +2,11 @@ import Polygon from './polygon.js';
 import ClickArea from './clickArea.js';
 import polygonToTriangle from "./polygonToTriangle";
 import pelotari from '../json/pelotari.json'
+import climbing from '../json/climbing.json'
 
 export default function root(stage) {
-    let frames = pelotari.frames;
+    let animations = [pelotari.frames, climbing.frames]
+    let frames = animations[1];
     let indexFrame = 0;
 
     let createjs = window.createjs;
