@@ -3,48 +3,59 @@ import Head from 'next/head';
 import root from './Animation/modules/root';
 import utilStyles from '../styles/utils.module.css'
 import Script from 'next/script'
+import { selectPostState } from "../store/postSlice";
+import { useSelector } from "react-redux";
 
 export default function Animation() {
     const canvasRef = useRef(null);
+    const postState = useSelector(selectPostState);
+    const refStage = useRef(null);
 
     const onScriptLoaded = () => {
+        if(refStage.current !== null) return;
         const createjs = window.createjs;
-        const stage = new createjs.Stage(canvasRef.current);
-        createjs.Touch.enable(stage);
+        refStage.current = new createjs.Stage(canvasRef.current);
+        createjs.Touch.enable(refStage.current);
 
         // start the tick and point it at the window so we can do some work before updating the stage:
         createjs.Ticker.timingMode = createjs.Ticker.RAF;
         if(!createjs.Ticker.hasEventListener("tick")) createjs.Ticker.on("tick", tick);
         
-        root(stage);
+        root(refStage.current);
 
         function tick() {
-            stage.update();
+            refStage.current.update();
         }
     }
 
     useEffect(() => {
-        if(window.createjs === undefined) return;
+        if(window.createjs === undefined || refStage.current !== null) return;
         const createjs = window.createjs;
-        let stage = new createjs.Stage(canvasRef.current);
+        refStage.current = new createjs.Stage(canvasRef.current);
         let tickHandler;
-        createjs.Touch.enable(stage);
+        createjs.Touch.enable(refStage.current);
 
         // start the tick and point it at the window so we can do some work before updating the stage:
         createjs.Ticker.timingMode = createjs.Ticker.RAF;
         if(!createjs.Ticker.hasEventListener("tick")) tickHandler = createjs.Ticker.addEventListener("tick", tick);
         
-        root(stage);
+        root(refStage.current);
 
         function tick() {
-            if(stage !== null) stage.update();
+            if(refStage.current !== null) refStage.current.update();
         }
 
         return function cleanup() {
             createjs.Ticker.removeAllEventListeners()
-            stage = null;
+            refStage.current = null;
           };
     }, [])
+
+    useEffect(()=>{
+        let e = new createjs.Event("changePostAnimation");
+        e.postState = postState;
+        refStage.current.dispatchEvent(e);
+    }, [postState])
 
     return (
         <>

@@ -1,11 +1,12 @@
 import Polygon from './polygon.js';
 import ClickArea from './clickArea.js';
 import polygonToTriangle from "./polygonToTriangle";
-import pelotari from '../json/pelotari.json'
+import pelotari from '../json/pelotebasque.json'
 import climbing from '../json/climbing.json'
 
 export default function root(stage) {
-    let animations = [pelotari.frames, climbing.frames]
+    let postStates = ['climbing', 'pelotebasque'];
+    let animations = [climbing.frames, pelotari.frames]
     let frames = animations[1];
     let indexFrame = 0;
 
@@ -30,15 +31,18 @@ export default function root(stage) {
 
     // FIX THAT METHOD FOR MULTI STAGES
     stage.on('changeFrame', (e) => {
-        changeFrame(e, stage, container);
+        changeFrame();
     })
 
-    function changeFrame(e, stage, container) {
-        indexFrame++;
+    stage.on('changePostAnimation', (e) => {
+        changePostAnimation(e);
+    })
+
+    function changeFrame(newAnimation = false) {
+        newAnimation ? indexFrame = 0 : indexFrame++;
         if (indexFrame >= frames.length) indexFrame = 0;
 
         let nextFrame = frames[indexFrame];
-        console.log(nextFrame);
         stage.polygons.map((polygon, index) => {
             if (index >= nextFrame.shapes.length) return;
             polygon.coords = polygon.projectedCoords = nextFrame.shapes[index].coords;
@@ -58,6 +62,17 @@ export default function root(stage) {
                 container.addChild(polygon);
             }
         }
+        console.log(stage.polygons);
+    }
+
+    function changePostAnimation(e) {
+        if(e.postState === null) return;
+        let indexPost = postStates.findIndex((element) => element === e.postState.toLowerCase().replace(/\s/g, ''))
+        if(indexPost !== -1){
+            frames = animations[indexPost];
+            convertPolygonToTriangles(frames);
+            changeFrame(true);
+        } 
     }
 
     function convertPolygonToTriangles (frames) {
