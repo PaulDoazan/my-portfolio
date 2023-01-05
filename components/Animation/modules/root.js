@@ -1,60 +1,77 @@
 import Polygon from './polygon.js';
 import ClickArea from './clickArea.js';
-import ducuing from '../json/ducuing.json'// assert { type: "json" };
-import dubie from '../json/dubie.json'// assert { type: "json" };
-import poirot from '../json/poirot.json'// assert { type: "json" };
-import woki from '../json/woki.json'// assert { type: "json" };
+import polygonToTriangle from "./polygonToTriangle";
+import pelotari from '../json/pelotari.json'
 
 export default function root(stage) {
-    let createjs;
-    let polygons = [];
-    let characters = [ducuing, poirot, dubie, woki];
-    let indexCharacter = 0;
+    let frames = pelotari.frames;
+    let indexFrame = 0;
 
-    createjs = window.createjs;
+    let createjs = window.createjs;
     let container = new createjs.MovieClip();
-
-    stage.removeAllChildren()
-    stage.removeAllEventListeners()
     stage.addChild(container);
+
+    let polygons = [];
     stage.polygons = polygons;
 
-    characters[0].default.map((shape) => {
+    convertPolygonToTriangles(frames);
+
+    frames[0].shapes.map((shape) => {
         let polygon = new Polygon(shape, stage);
         polygons.push(polygon);
         container.addChild(polygon);
     })
+    stage.update();
 
     let clickArea = new ClickArea();
     stage.addChild(clickArea);
 
-    stage.on('changeCharacter', (e) => {
-        changeCharacter(e, stage, container);
+    // FIX THAT METHOD FOR MULTI STAGES
+    stage.on('changeFrame', (e) => {
+        changeFrame(e, stage, container);
     })
 
-    function changeCharacter(e, stage, container) {
-        indexCharacter++;
-        if (indexCharacter >= characters.length) indexCharacter = 0;
-    
-        let nextCharacter = characters[indexCharacter];
+    function changeFrame(e, stage, container) {
+        indexFrame++;
+        if (indexFrame >= frames.length) indexFrame = 0;
+
+        let nextFrame = frames[indexFrame];
+        console.log(nextFrame);
         stage.polygons.map((polygon, index) => {
-            if (index >= nextCharacter.default.length) return;
-            polygon.coords = polygon.projectedCoords = nextCharacter.default[index].coords;
-            polygon.color = nextCharacter.default[index].color;
+            if (index >= nextFrame.shapes.length) return;
+            polygon.coords = polygon.projectedCoords = nextFrame.shapes[index].coords;
+            polygon.color = nextFrame.shapes[index].color;
         })
-    
-        if (stage.polygons.length > nextCharacter.default.length) {
-            for (let i = nextCharacter.default.length; i <= stage.polygons.length; i++) {
+
+        if (stage.polygons.length > nextFrame.shapes.length) {
+            for (let i = nextFrame.shapes.length; i <= stage.polygons.length; i++) {
                 let polygon = stage.polygons[i];
                 container.removeChild(polygon);
             }
-            stage.polygons.splice(nextCharacter.default.length);
-        } else if (stage.polygons.length < nextCharacter.default.length) {
-            for (let i = stage.polygons.length; i < nextCharacter.default.length; i++) {
-                let polygon = new Polygon(nextCharacter.default[i], stage, true);
+            stage.polygons.splice(nextFrame.shapes.length);
+        } else if (stage.polygons.length < nextFrame.shapes.length) {
+            for (let i = stage.polygons.length; i < nextFrame.shapes.length; i++) {
+                let polygon = new Polygon(nextFrame.shapes[i], stage, true);
                 stage.polygons.push(polygon);
                 container.addChild(polygon);
             }
         }
+    }
+
+    function convertPolygonToTriangles (frames) {
+        frames.map((frame)=>{
+            let triangulatedShapes = [];
+            frame.shapes.map((shape)=>{
+                let triangles = polygonToTriangle.triangulate(shape.coords);
+                triangles.map((triangle)=>{
+                    let convertedCoords = [];
+                    triangle.map((corner) => {
+                        if (corner && corner.length) convertedCoords.push({ x: corner[0], y: corner[1] })
+                    })
+                    triangulatedShapes.push({coords: convertedCoords, color: shape.color, locked: shape.locked})
+                })
+            })
+            frame.shapes = triangulatedShapes;
+        })
     }
 }

@@ -28,7 +28,7 @@ export default function Layout({
   }
 
   const onScriptLoaded = () => {
-    console.log('loaded');
+    // console.log('loaded');
 }
 
   return (

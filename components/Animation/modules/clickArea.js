@@ -50,7 +50,7 @@ export default function clickArea() {
         let stage = tg.parent;
         tg.removeChild(tg.targetCircle);
     
-        stage.dispatchEvent(new createjs.Event("changeCharacter"));
+        stage.dispatchEvent(new createjs.Event("changeFrame"));
         stage.dispatchEvent(new createjs.Event("targetUp"));
     }
     
