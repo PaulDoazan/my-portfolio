@@ -164,8 +164,7 @@ function updateShape(e) {
 }
 
 function hexToRgb(hex) {
-    //return `rgba(0,0,0,1)`;
-    if(hex === null) return `rgba(0,0,0,1)`;
+    if(!hex) return `rgba(0,0,0,0)`;
     if (hex.includes("#")) {
         let result = hex.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i
             , (m, r, g, b) => '#' + r + r + g + g + b + b)

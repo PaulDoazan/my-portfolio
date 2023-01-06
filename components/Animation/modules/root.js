@@ -7,7 +7,7 @@ import climbing from '../json/climbing.json'
 export default function root(stage) {
     let postStates = ['climbing', 'pelotebasque'];
     let animations = [climbing.frames, pelotari.frames]
-    let frames = animations[1];
+    let frames = [];
     let indexFrame = 0;
 
     let createjs = window.createjs;
@@ -16,14 +16,6 @@ export default function root(stage) {
 
     let polygons = [];
     stage.polygons = polygons;
-
-    convertPolygonToTriangles(frames);
-
-    frames[0].shapes.map((shape) => {
-        let polygon = new Polygon(shape, stage);
-        polygons.push(polygon);
-        container.addChild(polygon);
-    })
     stage.update();
 
     let clickArea = new ClickArea();
@@ -31,15 +23,20 @@ export default function root(stage) {
 
     // FIX THAT METHOD FOR MULTI STAGES
     stage.on('changeFrame', (e) => {
-        changeFrame();
+        changeFrame(e);
     })
 
     stage.on('changePostAnimation', (e) => {
         changePostAnimation(e);
     })
 
-    function changeFrame(newAnimation = false) {
-        newAnimation ? indexFrame = 0 : indexFrame++;
+    function changeFrame(e) {
+        if(frames.length === 0) return;
+        if(e.newAnimation){
+            indexFrame = 0
+        } else {
+            indexFrame++;
+        } 
         if (indexFrame >= frames.length) indexFrame = 0;
 
         let nextFrame = frames[indexFrame];
@@ -62,7 +59,6 @@ export default function root(stage) {
                 container.addChild(polygon);
             }
         }
-        console.log(stage.polygons);
     }
 
     function changePostAnimation(e) {
@@ -71,8 +67,11 @@ export default function root(stage) {
         if(indexPost !== -1){
             frames = animations[indexPost];
             convertPolygonToTriangles(frames);
-            changeFrame(true);
-        } 
+            let event = new createjs.Event("changeFrame");
+            event.newAnimation = true;
+            stage.dispatchEvent(event);
+            stage.dispatchEvent(new createjs.Event("targetUp"));
+        }
     }
 
     function convertPolygonToTriangles (frames) {

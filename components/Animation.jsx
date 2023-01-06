@@ -5,8 +5,10 @@ import utilStyles from '../styles/utils.module.css'
 import Script from 'next/script'
 import { selectPostState } from "../store/postSlice";
 import { useSelector } from "react-redux";
+import { useRouter } from 'next/router'
 
 export default function Animation() {
+    const router = useRouter()
     const canvasRef = useRef(null);
     const postState = useSelector(selectPostState);
     const refStage = useRef(null);
@@ -52,10 +54,11 @@ export default function Animation() {
     }, [])
 
     useEffect(()=>{
+        console.log(router.query);
         let e = new createjs.Event("changePostAnimation");
-        e.postState = postState;
+        e.postState = router.query.id;
         refStage.current.dispatchEvent(e);
-    }, [postState])
+    }, [router.query])
 
     return (
         <>
