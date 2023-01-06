@@ -1,12 +1,14 @@
 import Polygon from './polygon.js';
 import ClickArea from './clickArea.js';
 import polygonToTriangle from "./polygonToTriangle";
+import github from '../json/github.json'
 import pelotari from '../json/pelotebasque.json'
 import climbing from '../json/climbing.json'
+import linkedin from '../json/linkedin.json'
 
 export default function root(stage) {
-    let postStates = ['climbing', 'pelotebasque'];
-    let animations = [climbing.frames, pelotari.frames]
+    let postStates = ['linkedin','github', 'climbing', 'pelotebasque'];
+    let animations = [linkedin.frames, github.frames, climbing.frames, pelotari.frames]
     let frames = [];
     let indexFrame = 0;
 

@@ -22,7 +22,6 @@ export default function CustomButton({btnContent} : ButtonProps) {
         <Link  data-id="customBtn" onClick={handleClick} href={`/posts/${btnContent.toLowerCase()}`}>
             <span className={postState === btnContent ? utilStyles.fullYellowLink : utilStyles.thinYellowLink}>{btnContent}</span>
         </Link>
-        
     </>
   )
 }
