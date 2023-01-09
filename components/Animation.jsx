@@ -54,11 +54,11 @@ export default function Animation() {
     }, [])
 
     useEffect(()=>{
-        console.log(router.query);
-        let e = new createjs.Event("changePostAnimation");
-        e.postState = router.query.id;
+        let e = new window.createjs.Event("changePostAnimation");
+        e.postState = postState;
+        //e.postState = router.query.id;
         refStage.current.dispatchEvent(e);
-    }, [router.query])
+    }, [postState])
 
     return (
         <>
