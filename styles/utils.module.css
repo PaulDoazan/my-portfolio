@@ -24,7 +24,7 @@
 
  @media (max-width: 850px) {
   .firstSection {
-    padding: 0%;
+    padding: 1%;
   }
 
   .secondSection {
@@ -34,11 +34,11 @@
   }
 
   .width40 {
-    max-width: 90%;
+    max-width: 80%;
   }
 
   .width30 {
-    max-width: 90%;
+    max-width: 80%;
   }
 
   .blur {
