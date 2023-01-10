@@ -12,6 +12,7 @@
   width: 100%;
   position: absolute;
   margin-left: 48%;
+  background-color: #fcfcfc;
 }
 
 .width40 {
@@ -30,7 +31,6 @@
   .secondSection {
     margin-left: 0%;
     height: 100%;
-    background-color: #fcfcfc;
   }
 
   .width40 {
@@ -154,6 +154,7 @@
 .animationContainer {
   display: flex;
   justify-content: center;
+  background-color: #fcfcfc;
 }
 
 .canvasContainer {
