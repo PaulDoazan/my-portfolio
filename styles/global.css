@@ -14,6 +14,12 @@ body {
   }
 }
 
+@media (max-width: 450px) {
+  body {
+    padding: 0.5vh 2vw;
+  }
+}
+
 a {
   color: black;
   text-decoration: none;
@@ -43,4 +49,25 @@ p {
     color: white;
     background: black;
   }
+}
+
+.particle {
+  position: absolute;
+  content: '';
+  background-color: rgba(227, 204, 0, 0.5);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: ease-in pop 1s;
+}
+
+@keyframes pop {
+from {
+  opacity: 1;
+}
+to {
+  top: 0%;
+  left: 50%;
+  opacity: 0;
+}
 }
