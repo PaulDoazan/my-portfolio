@@ -6,10 +6,11 @@ import pelotari from '../json/pelotebasque.json'
 import climbing from '../json/climbing.json'
 import linkedin from '../json/linkedin.json'
 import bixie from '../json/bixie.json'
+import alec from '../json/alec.json'
 
 export default function root(stage) {
-    let postStates = ['bixie', 'linkedin','github', 'climbing', 'pelotebasque'];
-    let animations = [bixie.frames, linkedin.frames, github.frames, climbing.frames, pelotari.frames]
+    let postStates = ['alec', 'bixie', 'linkedin','github', 'climbing', 'pelotebasque'];
+    let animations = [alec.frames, bixie.frames, linkedin.frames, github.frames, climbing.frames, pelotari.frames]
     let frames = [];
     let indexFrame = 0;
 
