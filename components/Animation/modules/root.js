@@ -7,10 +7,12 @@ import climbing from '../json/climbing.json'
 import linkedin from '../json/linkedin.json'
 import bixie from '../json/bixie.json'
 import alec from '../json/alec.json'
+import portfolio from '../json/portfolio.json'
+import edumedia from '../json/edumedia.json'
 
 export default function root(stage) {
-    let postStates = ['alec', 'bixie', 'linkedin','github', 'climbing', 'pelotebasque'];
-    let animations = [alec.frames, bixie.frames, linkedin.frames, github.frames, climbing.frames, pelotari.frames]
+    let postStates = ['edumedia', 'portfolio', 'alec', 'bixie', 'linkedin','github', 'climbing', 'pelotebasque'];
+    let animations = [edumedia.frames, portfolio.frames, alec.frames, bixie.frames, linkedin.frames, github.frames, climbing.frames, pelotari.frames]
     let frames = [];
     let indexFrame = 0;
 
