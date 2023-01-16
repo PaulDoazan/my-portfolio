@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from 'next/router'
 
 export default function Arrows() {
-    const posts : string[] = ['Github', 'Linkedin', 'Bixie', 'Alec', 'Portfolio', 'eduMedia', 'Sonesdi', 'MoultPistes', 's+a wedding', 'climbing', 'Pelote Basque']
+    const posts : string[] = ['Github', 'Linkedin', 'Bixie', 'Alec', 'Portfolio', 'eduMedia', 'Sonesdi', 'MoultPistes', 'weddingDropBox', 'climbing', 'Pelote Basque']
     const postState = useSelector(selectPostState);
     const dispatch = useDispatch();
     const router = useRouter()

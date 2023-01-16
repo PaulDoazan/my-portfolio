@@ -9,10 +9,11 @@ import bixie from '../json/bixie.json'
 import alec from '../json/alec.json'
 import portfolio from '../json/portfolio.json'
 import edumedia from '../json/edumedia.json'
+import weddingdropbox from '../json/weddingdropbox.json'
 
 export default function root(stage) {
-    let postStates = ['edumedia', 'portfolio', 'alec', 'bixie', 'linkedin','github', 'climbing', 'pelotebasque'];
-    let animations = [edumedia.frames, portfolio.frames, alec.frames, bixie.frames, linkedin.frames, github.frames, climbing.frames, pelotari.frames]
+    let postStates = ['weddingdropbox' ,'edumedia', 'portfolio', 'alec', 'bixie', 'linkedin','github', 'climbing', 'pelotebasque'];
+    let animations = [weddingdropbox.frames, edumedia.frames, portfolio.frames, alec.frames, bixie.frames, linkedin.frames, github.frames, climbing.frames, pelotari.frames]
     let frames = [];
     let indexFrame = 0;
 
