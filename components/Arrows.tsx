@@ -25,10 +25,13 @@ export default function Arrows() {
   return (
     <div className={utilStyles.arrowsContainer}>
             <div onClick={handleClick} data-id='left'>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>
+                <span className={utilStyles.arrowHtml}>&larr;</span>
+                {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg> */}
             </div>
+            <h1 className={`${utilStyles.headingXl} ${utilStyles.transparentTitle}`}>{postState}</h1>
             <div onClick={handleClick} data-id='right'>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/></svg>
+                <span className={utilStyles.arrowHtml}>&rarr;</span>
+                {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/></svg> */}
             </div>
         </div>
   )

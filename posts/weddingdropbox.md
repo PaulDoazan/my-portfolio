@@ -1,5 +1,5 @@
 ---
-title: 'Sophie Ayoub Wedding'
+title: 'wedding DropBox'
 dates: ['2018-05-01']
 ---
 

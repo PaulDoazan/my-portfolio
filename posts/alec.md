@@ -1,5 +1,5 @@
 ---
-title: 'ALEC - Apprendre à Lire et à Compter'
+title: 'ALEC'
 dates: ['2020-09-01', '2022-08-31']
 ---
 

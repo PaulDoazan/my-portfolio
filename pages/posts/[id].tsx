@@ -20,7 +20,9 @@ export default function Post({
         <title>Project : {postData.title}</title>
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+        <div className={`${utilStyles.articleTitleContainer}`}>
+          <h1 className={`${utilStyles.headingXl}`}>{postData.title}</h1>
+        </div>
           <div className={utilStyles.lightText}>
           {postData.dates.map((d, ind, arr) => {           
             const differentYears = d.substring(0, 4) !== arr[arr.length - 1].substring(0, 4);
