@@ -11,10 +11,11 @@ import portfolio from '../json/portfolio.json'
 import edumedia from '../json/edumedia.json'
 import weddingdropbox from '../json/weddingdropbox.json'
 import sonesdi from '../json/sonesdi.json'
+import moultpistes from '../json/moultpistes.json'
 
 export default function root(stage) {
-    let postStates = ['sonesdi', 'weddingdropbox','edumedia', 'portfolio', 'alec', 'bixie', 'linkedin','github', 'climbing', 'pelotebasque'];
-    let animations = [sonesdi.frames, weddingdropbox.frames, edumedia.frames, portfolio.frames, alec.frames, bixie.frames, linkedin.frames, github.frames, climbing.frames, pelotari.frames]
+    let postStates = ['moultpistes', 'sonesdi', 'weddingdropbox','edumedia', 'portfolio', 'alec', 'bixie', 'linkedin','github', 'climbing', 'pelotebasque'];
+    let animations = [moultpistes.frames, sonesdi.frames, weddingdropbox.frames, edumedia.frames, portfolio.frames, alec.frames, bixie.frames, linkedin.frames, github.frames, climbing.frames, pelotari.frames]
     let frames = [];
     let indexFrame = 0;
 
