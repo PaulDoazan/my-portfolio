@@ -42,7 +42,7 @@ export default function Layout({
             <h1 className={utilStyles.heading2Xl}>Hello.</h1>
             <h2 className={utilStyles.headingXl}>My name is Paul Doazan.</h2>
             <p>
-              I am an independent web developer currently based in Bordeaux.
+              I am an independent web developer currently based in <CustomButton btnContent={'Oasis Coworking'} />, in Bordeaux.
             </p>
             <p>
               You can see the missions I&apos;ve accomplished on my <CustomButton btnContent={'Github'} /> and my <CustomButton btnContent={'Linkedin'}/>.
@@ -50,7 +50,7 @@ export default function Layout({
               Here are my most recent works (<CustomButton btnContent={'Bixie'} />, <CustomButton btnContent={'Alec'} />, <CustomButton btnContent={'Portfolio'} />), 
               the ones I spent such a great time with the team (<CustomButton btnContent={'eduMedia'} />, <CustomButton btnContent={'Sonesdi'} />)
                and some others that I particularly like 
-              (<CustomButton btnContent={'MoultPistes'} />, <CustomButton btnContent={'weddingDropBox'} />).
+              (<CustomButton btnContent={'MoultPistes'} />, <CustomButton btnContent={'wedding DropBox'} />).
             </p>
             <p>
               Outside of programming, spending time with my wife and taking care of our two kids,
