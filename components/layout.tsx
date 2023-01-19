@@ -43,10 +43,9 @@ export default function Layout({
             <h2 className={utilStyles.headingXl}>My name is Paul Doazan.</h2>
             <p>
               I am an independent web developer currently based in <CustomButton btnContent={'Oasis Coworking'} />, in Bordeaux.
+              You can see the missions I&apos;ve accomplished on my <CustomButton btnContent={'Github'} /> and my <CustomButton btnContent={'Linkedin'}/>.
             </p>
             <p>
-              You can see the missions I&apos;ve accomplished on my <CustomButton btnContent={'Github'} /> and my <CustomButton btnContent={'Linkedin'}/>.
-              </p><p>
               Here are my most recent works (<CustomButton btnContent={'Bixie'} />, <CustomButton btnContent={'Alec'} />, <CustomButton btnContent={'Portfolio'} />), 
               the ones I spent such a great time with the team (<CustomButton btnContent={'eduMedia'} />, <CustomButton btnContent={'Sonesdi'} />)
                and some others that I particularly like 
