@@ -12,6 +12,7 @@ export default function Post({
     title: string
     dates: string[]
     contentHtml: string
+    skills: string[]
   }
 }) {
   return (
@@ -30,6 +31,9 @@ export default function Post({
           })}
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        {postData.skills.map((s, ind) => {           
+            return <span className={`${utilStyles.skillLabel}`} key={ind}>{s}</span>
+          })}
       </article>
     </Layout>
   )

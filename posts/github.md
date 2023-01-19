@@ -1,10 +1,9 @@
 ---
 title: 'Github'
 dates: ['2018-05-01']
+skills: ['Stay organized']
 ---
 
-Here's my Github: **Github** and **Company**.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-- HTML
-- CSS
-- JS
+https://github.com/PaulDoazan/my-portfolio/

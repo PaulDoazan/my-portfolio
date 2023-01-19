@@ -1,10 +1,10 @@
 ---
 title: 'Bixie'
 dates: ['2022-09-01', '2022-10-01']
+skills: ['VanillaJS', 'CSS']
 ---
 
-Bixie company: **Bixie** and **Company**.
+Very professional team, great pleasure to work with them.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-- HTML
-- CSS
-- JS
+http://www.bixie.fr/

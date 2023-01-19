@@ -1,10 +1,9 @@
 ---
 title: 'Sonesdi'
 dates: ['2018-05-01']
+skills: ['Wordpress', 'OVH', 'React', 'Redux']
 ---
 
-Sonesdi company: **Sonesdi** and **Company**.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-- HTML
-- CSS
-- JS
+https://sonesdi.com/

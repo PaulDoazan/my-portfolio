@@ -1,10 +1,7 @@
 ---
 title: 'Climbing'
 dates: ['2018-05-01']
+skills: ['Focus', 'Team work', 'Never give up']
 ---
 
-Climbing company: **Climbing** and **Climbing**.
-
-- HTML
-- CSS
-- JS
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

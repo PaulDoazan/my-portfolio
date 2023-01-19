@@ -189,3 +189,13 @@
   width: -webkit-fill-available;
   background-color: white;
 }
+
+.skillLabel {
+  font-size: 10px;
+  font-weight: 500;
+  background-color: #236ec7;
+  color: #fcfcfc;
+  border-radius: 50% 20% / 10% 40%;
+  margin: 1em 0.3em 0 0;
+  padding: 0.3em 0.4em;
+}

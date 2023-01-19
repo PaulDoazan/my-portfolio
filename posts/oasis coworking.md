@@ -1,10 +1,9 @@
 ---
 title: 'Oasis Coworking'
 dates: ['2022-09-01']
+skills: ['Focus', 'Social', 'Chill']
 ---
 
 Nice place, nice people, good mood for working.
 
-- Focus
-- Social
-- Chill
+https://oasis-coworking.com/
