@@ -4,13 +4,18 @@ body {
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; 
   font-size: calc(10px + 0.33vw);
   -webkit-font-smoothing: antialiased;
-  padding: 1vh 5vw;
   background-color: #fcfcfc;
+}
+
+@media (min-width: 850px) {
+  body {
+    padding: 1vh 10vw;
+  }
 }
 
 @media (max-width: 850px) {
   body {
-    padding: 0.5vh 3.5vw;
+    padding: 0.5vh 2.5vw;
   }
 }
 
