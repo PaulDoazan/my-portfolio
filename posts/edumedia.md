@@ -1,12 +1,9 @@
 ---
 title: 'eduMedia'
 dates: ['2015-12-01', '2020-08-01']
-skills: ['Symfony', 'Vue', 'CreateJS', 'AnimateCC']
+skills: ['Symfony', 'Vue', 'CreateJS', 'AnimateCC', 'ThreeJS']
 ---
 
-<base target="_blank">
-
-The company where everything has started for me. Amazing team, crazy projects, I'll never thank them enough.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  
+You want to learn funny things about Physics, Geology or whatever in science ? In my case, I couldn't understand why plane's trajectory is always a curve on a map... I've spents weeks working on animation "Loxodromy / Orthodromy" (ThreeJS), now it's all clear :)  
 <br />  
 [&#8680; *edumedia-sciences.com*](https://www.edumedia-sciences.com/fr/)

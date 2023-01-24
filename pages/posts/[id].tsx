@@ -39,9 +39,11 @@ export default function Post({
             <br />
           </div>
         } */}
+        <p>
         {postData.skills.map((s, ind) => {           
             return <span className={`${utilStyles.skillLabel}`} key={ind}>{s}</span>
           })}
+        </p>
       </article>
     </Layout>
   )

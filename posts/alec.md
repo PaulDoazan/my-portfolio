@@ -5,7 +5,6 @@ skills: ['Symfony', 'Vue', 'CreateJS', 'AnimateCC']
 link: {text: 'alec', url: 'https://alec-edu.com/'}
 ---
 
-**A**pprendre à **L**ire **E**t à **C**ompter  
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  
+eduMedia team is behind that project. What I really liked about this one, is that the company decided to make something very modern out of oldy mouldy scripts. Very ambitious, very successful.  
 <br />  
 [&#8680; *alec-edu.com*](https://alec-edu.com/)

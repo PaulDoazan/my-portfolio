@@ -15,7 +15,7 @@ export default function Arrows() {
         const index : number = posts.findIndex((element) => element === postState);
         let nextIndex : number;
         if(isLeft){
-            nextIndex = index === 0 ? posts.length - 1 : index - 1;
+            nextIndex = index <= 0 ? posts.length - 1 : index - 1;
         } else {
             nextIndex = index === posts.length - 1 ? 0 : index + 1;
         }
