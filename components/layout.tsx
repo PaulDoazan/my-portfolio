@@ -57,7 +57,7 @@ export default function Layout({
             </p>
             <p>
               <br />  
-              <a href="mailto:paul.doazan@gmail.com">&#9993; <i>paul.doazan@gmail.com</i></a>
+              <a href="mailto:paul.doazan@gmail.com"><i>paul.doazan@gmail.com</i></a>
             </p>
         </section>
         <section className={`${utilStyles.width30} ${utilStyles.secondSection} ${home && utilStyles.displayNone}`}>
