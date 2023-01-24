@@ -4,4 +4,4 @@ dates: ['2018-05-01']
 skills: ['Focus', 'Communication', 'Never give up']
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Sometimes climbing makes you feel like you won't make it, then someone just show you a little trick to get further and suddenly, everything looks so easy. It sounds like programming, but here you litteraly sweat :)
