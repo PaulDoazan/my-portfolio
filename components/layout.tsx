@@ -42,18 +42,18 @@ export default function Layout({
             <h1 className={utilStyles.heading2Xl}>Hello.</h1>
             <h2 className={utilStyles.headingXl}>My name is Paul Doazan.</h2>
             <p>
-              I am an independent web developer currently based in <CustomButton btnContent={'Oasis Coworking'} />, in Bordeaux.
-              You can see the missions I&apos;ve accomplished on my <CustomButton btnContent={'Github'} /> and my <CustomButton btnContent={'Linkedin'}/>.
+              I am currently an independent web developer based in Bordeaux. You&apos;ll find me at <CustomButton btnContent={'Oasis Coworking'}/>.<br />
+              You can check my portfolio and the missions I&apos;ve accomplished on my <CustomButton btnContent={'Github'} /> and my <CustomButton btnContent={'Linkedin'}/>.
             </p>
             <p>
-              Here are my most recent works (<CustomButton btnContent={'Bixie'} />, <CustomButton btnContent={'Alec'} />, <CustomButton btnContent={'Portfolio'} />), 
-              the ones I spent such a great time with the team (<CustomButton btnContent={'eduMedia'} />, <CustomButton btnContent={'Sonesdi'} />)
-               and some others that I particularly like 
-              (<CustomButton btnContent={'MoultPistes'} />, <CustomButton btnContent={'wedding DropBox'} />).
+              Here are my most recent works : <CustomButton btnContent={'Bixie'} />, <CustomButton btnContent={'Alec'} />, <CustomButton btnContent={'Portfolio'} />.<br />
+              For some projects like <CustomButton btnContent={'eduMedia'}/>, <CustomButton btnContent={'Sonesdi'}/>, 
+              I spent a great time with the team and some others like <CustomButton btnContent={'MoultPistes'}/>, <CustomButton btnContent={'wedding DropBox'}/>, 
+              I worked on them independently.
             </p>
             <p>
-              Outside of programming, spending time with my wife and taking care of our two kids,
-              I practice <CustomButton btnContent={'climbing'} /> and I enjoy playing <CustomButton btnContent={'Pelote Basque'} /> with friends. 
+              Outside of the world of programming, I enjoy spending time with my wife and taking care of our two kids, 
+              I also practice <CustomButton btnContent={'climbing'}/> and I play <CustomButton btnContent={'Pelote Basque'}/> with friends.
             </p>
             <p>
               <br />  

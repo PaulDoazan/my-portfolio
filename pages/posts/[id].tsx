@@ -33,12 +33,11 @@ export default function Post({
           })}
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-        {/* {postData.link && 
-          <div>
-            <a href={postData.link.url} className={`${utilStyles.thinYellowLink}`}>{postData.link.text}</a>
-            <br />
-          </div>
-        } */}
+        <p>
+          {postData.link && 
+              <a href={postData.link.url} target="_blank" rel="noopener noreferrer">&#8680; <i>{postData.link.text}</i></a>
+          }
+        </p>
         <p>
         {postData.skills.map((s, ind) => {           
             return <span className={`${utilStyles.skillLabel}`} key={ind}>{s}</span>
