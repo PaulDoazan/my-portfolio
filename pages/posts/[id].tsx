@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
 import { GetStaticProps, GetStaticPaths } from 'next'
+import { spawn } from 'child_process'
 
 export default function Post({
   postData
@@ -13,6 +14,7 @@ export default function Post({
     dates: string[]
     contentHtml: string
     skills: string[]
+    link: {text: string, url: string}|null
   }
 }) {
   return (
@@ -31,6 +33,12 @@ export default function Post({
           })}
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        {/* {postData.link && 
+          <div>
+            <a href={postData.link.url} className={`${utilStyles.thinYellowLink}`}>{postData.link.text}</a>
+            <br />
+          </div>
+        } */}
         {postData.skills.map((s, ind) => {           
             return <span className={`${utilStyles.skillLabel}`} key={ind}>{s}</span>
           })}

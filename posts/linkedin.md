@@ -1,10 +1,10 @@
 ---
 title: 'Linkedin'
-dates: ['2018-05-01']
+dates: ['2023-01-01']
 skills: ['Social', 'Network']
 ---
 
-Here's an exhaustive list of my projects :
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+On my linkedin account, you'll find an exhaustive list of my professional projects. Besides, you'll get more information about my career, studies etc.  
+<br />  
+[&#8680; *linkedin.com/paul-doazan*](https://www.linkedin.com/in/paul-doazan-333a31152/)
 
-https://www.linkedin.com/in/paul-doazan-333a31152/

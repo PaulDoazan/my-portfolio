@@ -1,9 +1,10 @@
 ---
 title: 'Github'
-dates: ['2018-05-01']
-skills: ['Stay organized']
+dates: ['2023-01-01']
+skills: ['Organization', 'Share', 'Learn']
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-https://github.com/PaulDoazan/my-portfolio/
+Here you can find the public repository of this portfolio made with NextJS.  
+Feel free to look around.  
+<br />  
+[&#8680; *github.com/PaulDoazan/my-portfolio/*](https://github.com/PaulDoazan/my-portfolio/)
