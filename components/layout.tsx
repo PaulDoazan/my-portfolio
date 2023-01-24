@@ -52,8 +52,8 @@ export default function Layout({
               I worked on them independently.
             </p>
             <p>
-              Outside of the world of programming, I enjoy spending time with my wife and taking care of our two kids, 
-              I also practice <CustomButton btnContent={'climbing'}/> and I play <CustomButton btnContent={'Pelote Basque'}/> with friends.
+              Outside of the world of programming, 
+              I practice <CustomButton btnContent={'climbing'}/> and I play <CustomButton btnContent={'Pelote Basque'}/> with friends.
             </p>
             <p>
               <br />  
