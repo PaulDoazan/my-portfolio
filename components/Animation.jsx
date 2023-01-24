@@ -24,6 +24,7 @@ export default function Animation() {
         if(!createjs.Ticker.hasEventListener("tick")) createjs.Ticker.on("tick", tick);
         
         root(refStage.current);
+        //canvasResponsive();
 
         function tick() {
             refStage.current.update();
@@ -42,6 +43,7 @@ export default function Animation() {
         if(!createjs.Ticker.hasEventListener("tick")) tickHandler = createjs.Ticker.addEventListener("tick", tick);
         
         root(refStage.current);
+        canvasResponsive();
 
         function tick() {
             if(refStage.current !== null) refStage.current.update();
@@ -52,6 +54,11 @@ export default function Animation() {
             refStage.current = null;
           };
     }, [])
+
+    const canvasResponsive = () => {
+        let parentWidth = canvasRef.current.parentElement.clientWidth;
+        canvasRef.current.style.width = `${parentWidth}px`;
+    }
 
     useEffect(()=>{
         let e = new window.createjs.Event("changePostAnimation");

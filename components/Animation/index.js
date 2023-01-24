@@ -10,8 +10,11 @@ export function initialize() {
     const ctx = canvas.getContext('2d');
 
     const size = 600;
-    canvas.style.width = `${size}px`;
-    canvas.style.height = `${size}px`;
+
+    let parentWidth = canvas.parentElement.outerWidth;
+    let parentHeight =  canvas.parentElement.outerHeight;
+    canvas.style.width = `${parentWidth}px`;
+    canvas.style.height = `${parentHeight}px`;
 
     // Set actual size in memory (scaled to account for extra pixel density).
     const scale = window.devicePixelRatio; // Change to 1 on retina screens to see blurry canvas.
