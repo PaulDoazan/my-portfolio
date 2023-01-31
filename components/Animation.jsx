@@ -13,16 +13,24 @@ export default function Animation() {
     const postState = useSelector(selectPostState);
     const refStage = useRef(null);
 
+    const changePostAnimation = (postState) => {
+        if (window.createjs === undefined) return;
+        let e = new window.createjs.Event("changePostAnimation");
+        e.postState = postState;
+        //e.postState = router.query.id;
+        refStage.current.dispatchEvent(e);
+    }
+
     const onScriptLoaded = () => {
-        if(refStage.current !== null) return;
+        if (refStage.current !== null) return;
         const createjs = window.createjs;
         refStage.current = new createjs.Stage(canvasRef.current);
         createjs.Touch.enable(refStage.current);
 
         // start the tick and point it at the window so we can do some work before updating the stage:
         createjs.Ticker.timingMode = createjs.Ticker.RAF;
-        if(!createjs.Ticker.hasEventListener("tick")) createjs.Ticker.on("tick", tick);
-        
+        if (!createjs.Ticker.hasEventListener("tick")) createjs.Ticker.on("tick", tick);
+
         root(refStage.current);
         //canvasResponsive();
 
@@ -32,7 +40,7 @@ export default function Animation() {
     }
 
     useEffect(() => {
-        if(window.createjs === undefined || refStage.current !== null) return;
+        if (window.createjs === undefined || refStage.current !== null) return;
         const createjs = window.createjs;
         refStage.current = new createjs.Stage(canvasRef.current);
         let tickHandler;
@@ -40,19 +48,19 @@ export default function Animation() {
 
         // start the tick and point it at the window so we can do some work before updating the stage:
         createjs.Ticker.timingMode = createjs.Ticker.RAF;
-        if(!createjs.Ticker.hasEventListener("tick")) tickHandler = createjs.Ticker.addEventListener("tick", tick);
-        
+        if (!createjs.Ticker.hasEventListener("tick")) tickHandler = createjs.Ticker.addEventListener("tick", tick);
+
         root(refStage.current);
         canvasResponsive();
 
         function tick() {
-            if(refStage.current !== null) refStage.current.update();
+            if (refStage.current !== null) refStage.current.update();
         }
 
         return function cleanup() {
             createjs.Ticker.removeAllEventListeners()
             refStage.current = null;
-          };
+        };
     }, [])
 
     const canvasResponsive = () => {
@@ -60,19 +68,20 @@ export default function Animation() {
         canvasRef.current.style.width = `${parentWidth}px`;
     }
 
-    useEffect(()=>{
-        let e = new window.createjs.Event("changePostAnimation");
-        e.postState = postState;
-        //e.postState = router.query.id;
-        refStage.current.dispatchEvent(e);
+    useEffect(() => {
+        changePostAnimation(postState);
     }, [postState])
+
+    useEffect(() => {
+        changePostAnimation(router.query.id);
+    }, [])
 
     return (
         <>
-        <Head>
-            <script src="https://code.createjs.com/1.0.0/createjs.min.js" async></script>
-        </Head>
-        <Script
+            <Head>
+                <script src="https://code.createjs.com/1.0.0/createjs.min.js" async></script>
+            </Head>
+            <Script
                 src="https://code.createjs.com/1.0.0/createjs.min.js"
                 onLoad={onScriptLoaded}
             />
