@@ -79,7 +79,14 @@ export default function Animation() {
     return (
         <>
             <Head>
-                <script src="https://code.createjs.com/1.0.0/createjs.min.js" async></script>
+                <title>
+                    Made by Paul Doazan
+                </title>
+                <meta
+                    name="description"
+                    content="Paul Doazan portfolio, with 2D animations content."
+                    key="desc"
+                />
             </Head>
             <Script
                 src="https://code.createjs.com/1.0.0/createjs.min.js"

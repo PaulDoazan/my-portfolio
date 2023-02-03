@@ -1,10 +1,7 @@
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
-import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
-import Link from 'next/link'
 import { GetStaticProps } from 'next'
-import { useState } from 'react'
 
 export default function Home({
   allPostsData
@@ -14,11 +11,16 @@ export default function Home({
     title: string
     id: string
   }[]
-}) { 
+}) {
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
+        <meta
+          name="description"
+          content="Paul Doazan portfolio, with 2D animations content."
+          key="desc"
+        />
       </Head>
       {/* <div className={utilStyles.mainContainer}>
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
