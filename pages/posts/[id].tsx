@@ -22,7 +22,7 @@ export default function Post({
         <title>Project : {postData.title}</title>
         <meta
           name="description"
-          content="Paul Doazan project."
+          content="Paul Doazan, web developer, portfolio.."
           key="desc"
         />
       </Head>

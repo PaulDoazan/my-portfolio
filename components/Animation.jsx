@@ -84,7 +84,7 @@ export default function Animation() {
                 </title>
                 <meta
                     name="description"
-                    content="Paul Doazan portfolio, with 2D animations content."
+                    content="Paul Doazan, web developer, portfolio."
                     key="desc"
                 />
             </Head>
